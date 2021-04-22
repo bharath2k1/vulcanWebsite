@@ -30,7 +30,7 @@ const subject =
 
 function Item() {
   return (
-    <div>
+    <div className="market-item">
       <div
         class="section-header text-center wow zoomIn edit1"
         data-wow-delay="0.1s"

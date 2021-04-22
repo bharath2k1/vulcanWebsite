@@ -36,11 +36,11 @@ const responsive = {
 
 function MineralComponent() {
   return (
-    <div>
+    <div >
       <div class="team" id="team">
           <div className="box">
         <div
-          class="section-header text-center wow zoomIn"
+          class="section-header text-center wow zoomIn mineral-item"
           data-wow-delay="0.1s"
         >
           <p>Minerals</p>

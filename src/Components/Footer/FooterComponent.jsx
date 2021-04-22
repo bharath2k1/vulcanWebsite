@@ -18,8 +18,9 @@ function FooterComponent() {
               <div class="ftco-footer-widget mb-4" data-aos="zoom-in">
                 <h2 class="ftco-heading-2">About</h2>
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
+                  Vulcan Ceramics Co Pvt Ltd is involved in B to B supply. It
+                  started with the ceramic sector and now working with the
+                  Ceramic , Cosmetics and Foundry sector.
                 </p>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                   <li class="ftco-animate">
@@ -63,7 +64,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      About
+                      Business
                     </a>
                   </li>
                   <li>
@@ -71,7 +72,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Services
+                      Products
                     </a>
                   </li>
                   <li>
@@ -79,7 +80,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Projects
+                      Careers
                     </a>
                   </li>
                   <li>
@@ -95,14 +96,14 @@ function FooterComponent() {
             </div>
             <div class="col-md">
               <div class="ftco-footer-widget mb-4">
-                <h2 class="ftco-heading-2">Services</h2>
+                <h2 class="ftco-heading-2">Industries We serve</h2>
                 <ul class="list-unstyled">
                   <li>
                     <a href="/">
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Web Design
+                     Agriculture Industry
                     </a>
                   </li>
                   <li>
@@ -110,7 +111,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Web Development
+                      Cosmetic Prodcts
                     </a>
                   </li>
                   <li>
@@ -118,7 +119,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Business Strategy
+                      Animal Nutrition & Health
                     </a>
                   </li>
                   <li>
@@ -126,7 +127,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Data Analysis
+                      Fisheries
                     </a>
                   </li>
                   <li>
@@ -134,7 +135,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                      Graphic Design
+                      Cement & Construction
                     </a>
                   </li>
                 </ul>
@@ -150,8 +151,7 @@ function FooterComponent() {
                         <RoomIcon />
                       </span>
                       <span class="text">
-                        203 Fake St. Mountain View, San Francisco, California,
-                        USA
+                      315/274, 2 Nd Floor, Westend Marg, Saidulajab, Near Saket Metro Station, Delhi - 110030, India
                       </span>
                     </li>
                     <li>
@@ -159,7 +159,7 @@ function FooterComponent() {
                         <span class="icon icon-phone">
                           <PhoneIcon />{" "}
                         </span>
-                        <span class="text">+2 392 3929 210</span>
+                        <span class="text">++91-9810141644, +91-9910013595</span>
                       </a>
                     </li>
                     <li>

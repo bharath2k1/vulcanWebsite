@@ -1,7 +1,8 @@
 import React from "react";
 // import  Carousel  from 'react-elastic-carousel';
 import Typical from "react-typical";
-import ContactIconsComponent from "../../Contact/ContactIcons/ContactIconsComponent";
+// import ContactIconsComponent from "../../Contact/ContactIcons/ContactIconsComponent";
+// import ContactsFormComponent from "../../Contact/ContactsForm/ContactsFormComponent";
 import FooterComponent from "../../Footer/FooterComponent";
 import AboutComponent from "../About/AboutComponent";
 import Item from "../Markets/item";
@@ -54,7 +55,8 @@ function HeaderComponent() {
 
       <Item />
       <FooterComponent/>
-      <ContactIconsComponent/>
+      {/* <ContactsFormComponent/> */}
+      
     </div>
   );
 }
