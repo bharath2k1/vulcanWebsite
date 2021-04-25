@@ -34,7 +34,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    margin-top: 120px
+    margin-top: 150px
 }
 
 .hero .hero-text p {
@@ -42,6 +42,7 @@
     font-size: 35px;
     font-weight: 600;
     margin-bottom: 15px;
+    
 }
 
 .hero .hero-text h1 {
@@ -168,4 +169,19 @@
         padding: 8px 10px;
         letter-spacing: 0;
     }
+}
+
+
+.buttonedit{
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-width: 2px;
+    border-color: #ffffff;   
+    margin-top: 35px;
+    padding: 12px 30px;
+    letter-spacing: 1px;
+    
+    
+    /* box-shadow: inset 0 0 0 50px #ffffff; */
 }

@@ -1,4 +1,7 @@
+
+
 import React from "react";
+import Button from "@material-ui/core/Button";
 // import  Carousel  from 'react-elastic-carousel';
 import Typical from "react-typical";
 // import ContactIconsComponent from "../../Contact/ContactIcons/ContactIconsComponent";
@@ -18,10 +21,9 @@ function HeaderComponent() {
       <div class="hero" id="home">
         <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-lg-12 col-md-6">
               <div class="hero-content">
                 <div class="hero-text">
-                  <p>Hello!</p>
                   <h1>Welcome to Vulcan</h1>
                   <h2>
                     <Typical
@@ -32,12 +34,15 @@ function HeaderComponent() {
                   </h2>
                 </div>
                 <div class="hero-btn">
-                  <a class="btn" href="">
-                    Hire Me
-                  </a>
-                  <a class="btn" href="">
-                    Contact Me
-                  </a>
+                  
+                    <button className="buttonedit" >
+                    Contact Us
+                    </button>
+               
+
+                  {/* <a class="btn" href="">
+                    Contact Us
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -49,14 +54,15 @@ function HeaderComponent() {
           </div>
         </div>
       </div>
-      <AboutComponent />
+      <div data-aos="fade-up">
+        <AboutComponent />
+      </div>
 
       <MineralComponent />
 
       <Item />
-      <FooterComponent/>
+      <FooterComponent />
       {/* <ContactsFormComponent/> */}
-      
     </div>
   );
 }

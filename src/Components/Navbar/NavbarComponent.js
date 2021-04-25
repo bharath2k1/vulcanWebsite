@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavDropdown } from "react-bootstrap";
+// import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import "./NavbarComponent.css";
@@ -37,16 +37,16 @@ function NavbarComponent() {
         <div class="container-fluid">
           <a href="index.html" class="navbar-brand">
             VULCAN
-            <i class='fab fa-typo3' />
+            <i class="fab fa-typo3" />
           </a>
-          <button
+          {/* <button
             type="button"
             class="navbar-toggler"
             data-toggle="collapse"
             data-target="#navbarCollapse"
           >
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
 
           <div
             class="collapse navbar-collapse justify-content-between"
@@ -63,25 +63,11 @@ function NavbarComponent() {
               <a href="#about" class="nav-item nav-link">
                 Business
               </a>
-              <NavDropdown
-                class="nav-item nav-link"
-                title="Product"
-                id="basic-nav-dropdown"
-              >
-                <NavDropdown.Item href="/products">
-                  Sodium Bentomite
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Calcium Bentomite
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-              {/* <a href="#service" class="nav-item nav-link">
+
+              <a href="/products" class="nav-item nav-link">
                 Products
-              </a> */}
+              </a>
+
               <a href="#experience" class="nav-item nav-link">
                 operations & Binds
               </a>
@@ -94,9 +80,6 @@ function NavbarComponent() {
               <a href="#review" class="nav-item nav-link">
                 Contacts
               </a>
-              {/* <a href="#team" class="nav-item nav-link">Team</a>
-                        <a href="#blog" class="nav-item nav-link">Blog</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a> */}
             </div>
           </div>
         </div>

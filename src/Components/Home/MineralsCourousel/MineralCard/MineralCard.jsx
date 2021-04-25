@@ -4,7 +4,8 @@ import "./MineralCard.styles.css"
 function MineralCard(props) {
     return (
         <div>
-            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.0s">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.0s"  data-aos="fade-up"
+     data-aos-duration="3000"> 
                         <div class="team-item">
                             <div class="team-img">
                                 <img src={props.image} alt="Image"/>

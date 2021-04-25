@@ -34,6 +34,7 @@ function Item() {
       <div
         class="section-header text-center wow zoomIn edit1"
         data-wow-delay="0.1s"
+        data-aos="zoom-in"
       >
         <p>Markets</p>
         <h2>Markets and More</h2>
@@ -55,8 +56,14 @@ function Item() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
+        <div data-aos="flip-up" >
         <MarketCard name="agriculture" subject={subject} image={agriculture} />
+
+        </div>
+        <div data-aos="flip-down" >
         <MarketCard name="Iron and Steel" subject={subject} image={Iron} />
+
+        </div>
         <MarketCard name="agriculture" subject={subject} image={agriculture} />
         <MarketCard name="Iron and Steel" subject={subject} image={Iron} />
         <MarketCard name="agriculture" subject={subject} image={agriculture} />

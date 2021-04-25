@@ -2,17 +2,25 @@
 
 
 import HeaderComponent from "./Components/Home/Header/HeaderComponent";
-import NavbarComponent from "./Components/Home/Navbar/NavbarComponent";
+import NavbarComponent from "./Components/Navbar/NavbarComponent";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ProductComponent from "./Components/Products/ProductComponent";
+import ProductComponent from "./Components/Products/ProductItems/ProductComponent";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 // import NavBar from "./Navbar";
 
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  }, []);
   return (
     <Router>
    
  
       <NavbarComponent />
+      {/* <DemoNavbar/> */}
       <Switch>
 
       

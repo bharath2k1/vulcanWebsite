@@ -2,10 +2,14 @@ import React from "react";
 import "./Products.style.css";
 // import Colors from './components/Colors'
 import DetailsThumb from "./Detailsthumb";
-import sodiumBentonite1 from "../../Images/sodiumBentonite1.jpeg";
-import sodiumBentonite2 from "../../Images/sodiumBentonite2.jpg";
-import sodiumBentonite3 from "../../Images/sodiumBentonite3.jpg";
-import sodiumBentonite4 from "../../Images/sodiumBentonite4.jpg";
+import sodiumBentonite1 from "../../../Images/sodiumBentonite1.jpeg";
+import sodiumBentonite2 from "../../../Images/sodiumBentonite2.jpg";
+import sodiumBentonite3 from "../../../Images/sodiumBentonite3.jpg";
+import sodiumBentonite4 from "../../../Images/sodiumBentonite4.jpg";
+import BannerComponent from "../Banner/BannerComponent";
+import { Table } from "react-bootstrap";
+import BasicTable from "./BasicTable";
+
 
 class ProductComponent extends React.Component {
   state = {
@@ -23,8 +27,18 @@ class ProductComponent extends React.Component {
           "Bentonite is an absorbent aluminium phyllosilicate generally impure clay consisting mostly of montmorillonite, (Na,Ca)0.33(Al,Mg)2Si4O10(OH)2·(H2O)n.",
         content:
           "Bentonite minerals occur as lenses or seams containing up to 50% moisture. They are rocklike in nature and usually extracted by opencast mining (quarrying)\n sNatural sodium bentonite as the name suggests occurs with sodium as the predominant exchange cation. The name originates from its discovery near Fort Benton, USA. Sodium bentonites are characterized by high swelling, high liquid limit and high thermal durability",
-        price: 23,
-        colors: ["red", "black", "crimson", "teal"],
+        specifications: [
+          {
+            colour: "white",
+            Packaging_size: "40KG",
+            Packaging_Type: "HDPE Bags",
+            Form: "Powder",
+            Material: "Bentonite",
+            Phvalue: "09-10%",
+            ForMoreSpecifications: "Technical Data Sheet on Request only",
+          },
+        ],
+
         count: 1,
       },
     ],
@@ -49,31 +63,47 @@ class ProductComponent extends React.Component {
 
   render() {
     const { products, index } = this.state;
-    console.log(index);
+    
+    // console.log(index);s
+
     return (
-      <div className="appbox">
+      <div>
+        {products.map((item) => (
+          <BannerComponent title={item.title} text={item.description} />
+        ))}
+
         {products.map((item) => (
           <div className="details" key={item._id}>
-            <div className="big-img">
-              <img src={item.src[index]} alt="sodium bentomite" />
+            <div>
+              <div className="big-img">
+                <img src={item.src[index]} alt="sodium bentomite" />
+                <DetailsThumb
+                  images={item.src}
+                  tab={this.handleTab}
+                  myRef={this.myRef}
+                />
+              </div>
             </div>
+            
 
-            <div className="box">
+            <div className="box1">
               <div className="row">
                 <h2>{item.title}</h2>
                 <span>${item.price}</span>
               </div>
-              {/* <Colors colors={item.colors} /> */}
+ 
+
+
+            <BasicTable key={item.id} specifications={item.specifications}/>
+           
+             
 
               <p>{item.description}</p>
               <p>{item.content}</p>
 
-              <DetailsThumb
-                images={item.src}
-                tab={this.handleTab}
-                myRef={this.myRef}
-              />
-              <a class="btn" href="">Yes! I'm interested</a>
+              <a class="btn" href="">
+                Yes! I'm interested
+              </a>
             </div>
           </div>
         ))}
@@ -83,3 +113,9 @@ class ProductComponent extends React.Component {
 }
 
 export default ProductComponent;
+
+
+
+
+
+

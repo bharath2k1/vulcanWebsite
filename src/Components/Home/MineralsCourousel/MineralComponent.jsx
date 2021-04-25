@@ -42,6 +42,7 @@ function MineralComponent() {
         <div
           class="section-header text-center wow zoomIn mineral-item"
           data-wow-delay="0.1s"
+          data-aos="zoom-in"
         >
           <p>Minerals</p>
           <h2>Minerals and More</h2>
@@ -67,11 +68,14 @@ function MineralComponent() {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-            <MineralCard
+              
+              <MineralCard
               name="Calcium Carbonate"
               image={CalciumCarbonate}
               subject={subject}
             />
+            
+            
             <MineralCard name="Graphite" image={Graphite} subject={subject} />
             <MineralCard
               name="Calcium Carbonate"
@@ -85,6 +89,7 @@ function MineralComponent() {
               subject={subject}
             />
             <MineralCard name="Graphite" image={Graphite} subject={subject} />
+            
           </Carousel>
         </div>
         </div>
