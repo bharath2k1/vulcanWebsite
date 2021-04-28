@@ -12,7 +12,10 @@ function BannerComponent(props) {
           </div>
           <div class="container banner-text">
             <p>{props.text}</p>
-            <a class="btn">Get Best Quote</a>
+            {
+              props.btn? <a class="btn">{props.btn}</a> : null
+            }
+            
           </div>
         </div>
       </div>

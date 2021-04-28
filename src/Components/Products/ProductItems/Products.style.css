@@ -111,4 +111,10 @@
       width: 70px;
     }
   }
+
+
+[dir="rtl"] .carousel-container{
+  direction: ltr;
+}
+
  

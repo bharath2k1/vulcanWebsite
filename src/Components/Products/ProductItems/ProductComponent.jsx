@@ -6,18 +6,19 @@ import sodiumBentonite1 from "../../../Images/sodiumBentonite1.jpeg";
 import sodiumBentonite2 from "../../../Images/sodiumBentonite2.jpg";
 import sodiumBentonite3 from "../../../Images/sodiumBentonite3.jpg";
 import sodiumBentonite4 from "../../../Images/sodiumBentonite4.jpg";
-import BannerComponent from "../Banner/BannerComponent";
+import BannerComponent from "./Banner/BannerComponent";
 // import { Table } from "react-bootstrap";
 import BasicTable from "./BasicTable";
-import MediaCard from "../MediaCard/MediaCard";
+import MediaCard from "./MediaCard/MediaCard";
 import Carousel from "react-multi-carousel";
+import MineralCard from "../../Home/MineralsCourousel/MineralCard/MineralCard";
 
 
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
     slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
@@ -91,7 +92,7 @@ class ProductComponent extends React.Component {
       <div>
         <div>
           {products.map((item) => (
-            <BannerComponent title={item.title} text={item.description} />
+            <BannerComponent title={item.title} text={item.description}  btn= "Get Best Quote" />
           ))}
 
           {products.map((item) => (
@@ -113,10 +114,7 @@ class ProductComponent extends React.Component {
                   <span>${item.price}</span>
                 </div>
 
-                <BasicTable
-                  key={item.id}
-                  specifications={item.specifications}
-                />
+                <BasicTable/>
 
                 <p>{item.description}</p>
                 <p>{item.content}</p>
@@ -127,6 +125,14 @@ class ProductComponent extends React.Component {
               </div>
             </div>
           ))}
+        </div>
+        <div
+          class="section-header text-center wow zoomIn mineral-item"
+          data-wow-delay="0.1s"
+          data-aos="zoom-in"
+        >
+          <p>Products</p>
+          <h2>Our more Products</h2>
         </div>
         <Carousel
             containerClass="carousel-container"
@@ -149,19 +155,15 @@ class ProductComponent extends React.Component {
             itemClass="carousel-item-padding-40-px"
           >
               
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
-              <MediaCard/>
+           
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
+           
             
           </Carousel>
         

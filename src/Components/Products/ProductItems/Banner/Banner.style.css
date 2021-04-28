@@ -5,11 +5,11 @@
     padding: 90px 0;
     /* background: #EF233C; */
 
-    background: linear-gradient(rgba(36, 54, 54, 0.80), rgba(3, 48, 54, 0.85)), url(../../../Images/miningHome.jpeg);
+    background: linear-gradient(rgba(36, 54, 54, 0.80), rgba(3, 48, 54, 0.85)), url(../../../../Images/miningHome.jpeg);
     background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   height: 85vh;
+   height: 100%;
    justify-content: center;
 }
 

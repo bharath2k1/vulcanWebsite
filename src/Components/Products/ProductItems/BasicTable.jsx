@@ -1,61 +1,54 @@
-import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-// import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 500,
+    minWidth: 50,
   },
 });
 
- 
-
-function createData(name, specification) {
-  
-  
-  return { name, specification } 
-  
+function createData(specification, detail) {
+  return { specification, detail };
 }
 
+const rows = [
+  createData('Colour','White',),
+  createData('Packaging Size', 	'40 KG'),
+  createData('Packaging Type', 'HDPE Bags'),
+  createData('Material', 'Bentonite'),
+  createData('Ph Value','09-10%'),
+  createData('For More Specifications','	Technical Data Sheet on Request only'),
+];
 
-
-
-export default function BasicTable({ specifications }) {
+export default function BasicTable() {
   const classes = useStyles();
-  
- 
-  const [rows, setrows] = useState([])
-  {
-    specifications.map((item) => {
-      Object.entries(item).forEach(([key, value]) =>
-    
-        rows.push(createData(key, value))
-      );
-    });
-  }
 
-  return ( 
+  return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
-        {/* <TableHead>
+        <TableHead>
           <TableRow>
-            <TableCell align="right">Feature</TableCell>
+            <TableCell>Specification</TableCell>
             <TableCell align="right">Details</TableCell>
+            
           </TableRow>
-        </TableHead> */}
+        </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.name}>
+            <TableRow key={row.specification}>
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.specification}
               </TableCell>
-              <TableCell align="right">{row.specification}</TableCell>
+              <TableCell align="right">{row.detail}</TableCell>
+              
             </TableRow>
           ))}
         </TableBody>
