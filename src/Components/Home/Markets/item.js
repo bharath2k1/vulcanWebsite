@@ -1,10 +1,8 @@
 import React from "react";
-// import { Card } from 'react-bootstrap';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import agriculture from "../../../Images/agriculture.jpeg";
 import Iron from "../../../Images/Iron.jpeg";
-// import MineralCard from '../MineralsCourousel/MineralCard/MineralCard';
 import "./item.css";
 import MarketCard from "./MarketCard/MarketCard";
 
@@ -45,24 +43,24 @@ function Item() {
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={false}
-        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
         autoPlay={false}
         autoPlaySpeed={3000}
         keyBoardControl={true}
         customTransition="transform 500ms ease-in-out"
         transitionDuration={500}
         removeArrowOnDeviceType={["tablet", "mobile"]}
-        // deviceType={this.props.deviceType}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        <div data-aos="flip-up" >
-        <MarketCard name="agriculture" subject={subject} image={agriculture} />
-
+        <div data-aos="flip-up">
+          <MarketCard
+            name="agriculture"
+            subject={subject}
+            image={agriculture}
+          />
         </div>
-        <div data-aos="flip-down" >
-        <MarketCard name="Iron and Steel" subject={subject} image={Iron} />
-
+        <div data-aos="flip-down">
+          <MarketCard name="Iron and Steel" subject={subject} image={Iron} />
         </div>
         <MarketCard name="agriculture" subject={subject} image={agriculture} />
         <MarketCard name="Iron and Steel" subject={subject} image={Iron} />

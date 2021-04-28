@@ -1,15 +1,10 @@
-
-
 import React from "react";
-import Button from "@material-ui/core/Button";
-// import  Carousel  from 'react-elastic-carousel';
+
 import Typical from "react-typical";
-// import ContactIconsComponent from "../../Contact/ContactIcons/ContactIconsComponent";
-// import ContactsFormComponent from "../../Contact/ContactsForm/ContactsFormComponent";
+
 import FooterComponent from "../../Footer/FooterComponent";
 import AboutComponent from "../About/AboutComponent";
 import Item from "../Markets/item";
-// import Item from '../Markets/item';
 
 import MineralComponent from "../MineralsCourousel/MineralComponent";
 
@@ -34,23 +29,10 @@ function HeaderComponent() {
                   </h2>
                 </div>
                 <div class="hero-btn">
-                  
-                    <button className="buttonedit" >
-                    Contact Us
-                    </button>
-               
-
-                  {/* <a class="btn" href="">
-                    Contact Us
-                  </a> */}
+                  <button className="buttonedit">Contact Us</button>
                 </div>
               </div>
             </div>
-            {/* <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src={MiningPic} alt="Hero Image" />
-                        </div>
-                    </div> */}
           </div>
         </div>
       </div>
@@ -62,7 +44,6 @@ function HeaderComponent() {
 
       <Item />
       <FooterComponent />
-      {/* <ContactsFormComponent/> */}
     </div>
   );
 }

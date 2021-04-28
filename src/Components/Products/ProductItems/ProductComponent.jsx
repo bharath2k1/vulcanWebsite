@@ -1,24 +1,20 @@
 import React from "react";
 import "./Products.style.css";
-// import Colors from './components/Colors'
 import DetailsThumb from "./Detailsthumb";
 import sodiumBentonite1 from "../../../Images/sodiumBentonite1.jpeg";
-import sodiumBentonite2 from "../../../Images/sodiumBentonite2.jpg";
-import sodiumBentonite3 from "../../../Images/sodiumBentonite3.jpg";
-import sodiumBentonite4 from "../../../Images/sodiumBentonite4.jpg";
+// import sodiumBentonite2 from "../../../Images/sodiumBentonite2.jpg";
+// import sodiumBentonite3 from "../../../Images/sodiumBentonite3.jpg";
+// import sodiumBentonite4 from "../../../Images/sodiumBentonite4.jpg";
 import BannerComponent from "./Banner/BannerComponent";
-// import { Table } from "react-bootstrap";
 import BasicTable from "./BasicTable";
-import MediaCard from "./MediaCard/MediaCard";
 import Carousel from "react-multi-carousel";
 import MineralCard from "../../Home/MineralsCourousel/MineralCard/MineralCard";
-
-
+import ProductCard from "../ProductsPage/ProductItem/ProductCard";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 4,
     slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
@@ -34,38 +30,8 @@ const responsive = {
 };
 
 class ProductComponent extends React.Component {
-  state = {
-    products: [
-      {
-        _id: "1",
-        title: "Sodium Bentonite",
-        src: [
-          `${sodiumBentonite1}`,
-          `${sodiumBentonite2}`,
-          `${sodiumBentonite3}`,
-          `${sodiumBentonite4}`,
-        ],
-        description:
-          "Bentonite is an absorbent aluminium phyllosilicate generally impure clay consisting mostly of montmorillonite, (Na,Ca)0.33(Al,Mg)2Si4O10(OH)2·(H2O)n.",
-        content:
-          "Bentonite minerals occur as lenses or seams containing up to 50% moisture. They are rocklike in nature and usually extracted by opencast mining (quarrying)\n sNatural sodium bentonite as the name suggests occurs with sodium as the predominant exchange cation. The name originates from its discovery near Fort Benton, USA. Sodium bentonites are characterized by high swelling, high liquid limit and high thermal durability",
-        specifications: [
-          {
-            colour: "white",
-            Packaging_size: "40KG",
-            Packaging_Type: "HDPE Bags",
-            Form: "Powder",
-            Material: "Bentonite",
-            Phvalue: "09-10%",
-            ForMoreSpecifications: "Technical Data Sheet on Request only",
-          },
-        ],
-
-        count: 1,
-      },
-    ],
-    index: 0,
-  };
+  state = this.props.data;
+  _isMounted = false;
 
   myRef = React.createRef();
 
@@ -79,20 +45,25 @@ class ProductComponent extends React.Component {
   };
 
   componentDidMount() {
+    this._isMounted = true;
     const { index } = this.state;
     this.myRef.current.children[index].className = "active";
   }
 
   render() {
+    // console.log(this.props);
     const { products, index } = this.state;
-
-    // console.log(index);s
+    // console.log(products);
 
     return (
       <div>
         <div>
           {products.map((item) => (
-            <BannerComponent title={item.title} text={item.description}  btn= "Get Best Quote" />
+            <BannerComponent
+              title={item.title}
+              text={item.description}
+              btn="Get Best Quote"
+            />
           ))}
 
           {products.map((item) => (
@@ -111,10 +82,10 @@ class ProductComponent extends React.Component {
               <div className="box1">
                 <div className="row">
                   <h2>{item.title}</h2>
-                  <span>${item.price}</span>
+                  {/* <span>${item.price}</span> */}
                 </div>
 
-                <BasicTable/>
+                <BasicTable table={item.specifications} />
 
                 <p>{item.description}</p>
                 <p>{item.content}</p>
@@ -126,18 +97,18 @@ class ProductComponent extends React.Component {
             </div>
           ))}
         </div>
-        <div
-          class="section-header text-center wow zoomIn mineral-item"
-          data-wow-delay="0.1s"
-          data-aos="zoom-in"
-        >
-          <p>Products</p>
-          <h2>Our more Products</h2>
-        </div>
-        <Carousel
+        <div>
+          <div
+            class="section-header text-center wow zoomIn mineral-item productitem"
+            data-wow-delay="0.1s"
+            data-aos="zoom-in"
+          >
+            <p>Products</p>
+            <h2>Our more Products</h2>
+          </div>
+          <Carousel
             containerClass="carousel-container"
             responsive={responsive}
-            
             showDots={false}
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
@@ -148,25 +119,58 @@ class ProductComponent extends React.Component {
             keyBoardControl={true}
             customTransition="transform 500ms ease-in-out"
             transitionDuration={500}
-            
             removeArrowOnDeviceType={["tablet", "mobile"]}
             // deviceType={this.props.deviceType}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
           >
-              
-           
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-             <MineralCard name="sodium Bentonite" image={sodiumBentonite1}/>
-           
-            
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
+            <ProductCard
+              name="sodium Bentonite"
+              image={sodiumBentonite1}
+              link="/sodiumbentonite"
+            />
           </Carousel>
-        
+        </div>
       </div>
     );
   }

@@ -11,7 +11,7 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 function FooterComponent() {
   return (
     <div>
-      <footer class="ftco-footer ftco-section" data-aos="slide-up">
+      <footer class="ftco-footer ftco-section" data-aos="zoom-out">
         <div class="container">
           <div class="row mb-5">
             <div class="col-md">
@@ -103,7 +103,7 @@ function FooterComponent() {
                       <span class="icon-long-arrow-right mr-2">
                         <ArrowRightAltIcon />
                       </span>
-                     Agriculture Industry
+                      Agriculture Industry
                     </a>
                   </li>
                   <li>
@@ -151,7 +151,8 @@ function FooterComponent() {
                         <RoomIcon />
                       </span>
                       <span class="text">
-                      315/274, 2 Nd Floor, Westend Marg, Saidulajab, Near Saket Metro Station, Delhi - 110030, India
+                        315/274, 2 Nd Floor, Westend Marg, Saidulajab, Near
+                        Saket Metro Station, Delhi - 110030, India
                       </span>
                     </li>
                     <li>
@@ -159,7 +160,9 @@ function FooterComponent() {
                         <span class="icon icon-phone">
                           <PhoneIcon />{" "}
                         </span>
-                        <span class="text">++91-9810141644, +91-9910013595</span>
+                        <span class="text">
+                          ++91-9810141644, +91-9910013595
+                        </span>
                       </a>
                     </li>
                     <li>

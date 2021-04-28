@@ -1,5 +1,5 @@
 import React from "react";
-import "./MarketCard.styles.css"
+import "./MarketCard.styles.css";
 
 function MarketCard(props) {
   return (

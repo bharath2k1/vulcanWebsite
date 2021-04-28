@@ -1,58 +1,50 @@
-
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-
-const useStyles = makeStyles({
-  table: {
-    minWidth: 50,
-  },
-});
+import React, { useEffect, useState } from "react";
 
 function createData(specification, detail) {
   return { specification, detail };
 }
 
-const rows = [
-  createData('Colour','White',),
-  createData('Packaging Size', 	'40 KG'),
-  createData('Packaging Type', 'HDPE Bags'),
-  createData('Material', 'Bentonite'),
-  createData('Ph Value','09-10%'),
-  createData('For More Specifications','	Technical Data Sheet on Request only'),
-];
+const rows = [];
 
-export default function BasicTable() {
-  const classes = useStyles();
+export default function BasicTable({ table }) {
+  const tableItems = table;
+
+  {
+    tableItems.map((item) => {
+      Object.entries(item).forEach(([key, value]) =>
+        rows.push(createData(key, value))
+      );
+    });
+  }
+
+  const uniqueArray = rows.filter((thing, index) => {
+    const _thing = JSON.stringify(thing);
+    return (
+      index ===
+      rows.findIndex((obj) => {
+        return JSON.stringify(obj) === _thing;
+      })
+    );
+  });
 
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Specification</TableCell>
-            <TableCell align="right">Details</TableCell>
-            
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.specification}>
-              <TableCell component="th" scope="row">
-                {row.specification}
-              </TableCell>
-              <TableCell align="right">{row.detail}</TableCell>
-              
-            </TableRow>
+    <div>
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          {uniqueArray.map((row) => (
+            <tr>
+              <td data-label="Name">{row.specification}</td>
+              <td data-label="Age">{row.detail}</td>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+        </tbody>
+      </table>
+    </div>
   );
 }

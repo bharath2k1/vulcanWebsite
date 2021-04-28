@@ -1,5 +1,4 @@
 import React from "react";
-import "./Agriculture.style.css";
 import agriinfo from "../../Images/agriinfo.jpg";
 import filtration from "../../Images/filtration.jpg";
 import rubber from "../../Images/rubber.jpg";
@@ -7,6 +6,7 @@ import Typical from "react-typical";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import Business from "../../Images/business.jpeg";
 import FooterComponent from "../Footer/FooterComponent";
+import "./Agriculture.style.css";
 
 function Agriculture() {
   return (
@@ -66,7 +66,7 @@ function Agriculture() {
         id="about-agri"
       >
         <div class="container-fluid">
-          {/* <h1 className="letter">Challenges & Solutions</h1> */}
+          
           <div
             class="section-agri text-center wow zoomIn header-agris"
             id="challenges"
@@ -83,11 +83,11 @@ function Agriculture() {
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="about-content" data-aos="zoom-in-left" >
+              <div class="about-content" data-aos="zoom-in-left">
                 <div class="section-header text-left">
                   <p>Learn About Me</p>
                 </div>
-                <div class="about-text" >
+                <div class="about-text">
                   <p>
                     With the world population approaching 10 billion, farmers
                     are facing huge challenges as to how to feed growing
@@ -162,58 +162,58 @@ function Agriculture() {
             <h2>PLASTICS & RUBBER</h2>
           </div>
         </div>
-
-        
       </div>
 
       <div
-            class="section-agri text-center wow zoomIn header-agris"
-            id="business"
-            data-wow-delay="0.1s"
-            data-aos="zoom-in"
-          >
-            <p>Business</p>
-            <h2>BUSINESS SUCCESS</h2>
-          </div>
+        class="section-agri text-center wow zoomIn header-agris"
+        id="business"
+        data-wow-delay="0.1s"
+        data-aos="zoom-in"
+      >
+        <p>Business</p>
+        <h2>BUSINESS SUCCESS</h2>
+      </div>
       <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <div class="about-img"data-aos="zoom-in-right" >
-                  <img src={Business} alt="Image" />
-                </div>
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="about-img" data-aos="zoom-in-right">
+                <img src={Business} alt="Image" />
               </div>
-              <div class="col-lg-6">
-                <div class="about-content" data-aos="zoom-in-left" >
-                  <div class="section-header text-left"  >
-                    <p>A specialized engineered mineral solution for fertilizers</p>
-                    {/* <h2>10 Years Experience</h2> */}
-                  </div>
-                  <div class="about-text">
-                    <p>
-                      I-Cote™ is an excellent engineered, anti-caking solution
-                      that considerably improves the shelf life of
-                      low-compatible blended fertilizers. I-Cote™ is ideal for
-                      producing new concentrated formulas that won’t cake during
-                      storage, clog equipment and reduce fertilizer spread.
-                      Adding I-Cote™ to high-nitrogen, concentrated fertilizers
-                      and organo minerals helps keep particles separate, keeping
-                      the fertilizer free-flowing and maximizing performance.
-                      I-Cote™ offers excellent value to the fertilizer industry
-                      as a high performance compatibilizer and long lasting
-                      anti-caking agent.
-                    </p>
-                  </div>
-
-                  <a class="btn" href="">
-                    Learn More
-                  </a>
+            </div>
+            <div class="col-lg-6">
+              <div class="about-content" data-aos="zoom-in-left">
+                <div class="section-header text-left">
+                  <p>
+                    A specialized engineered mineral solution for fertilizers
+                  </p>
+                  {/* <h2>10 Years Experience</h2> */}
                 </div>
+                <div class="about-text">
+                  <p>
+                    I-Cote™ is an excellent engineered, anti-caking solution
+                    that considerably improves the shelf life of low-compatible
+                    blended fertilizers. I-Cote™ is ideal for producing new
+                    concentrated formulas that won’t cake during storage, clog
+                    equipment and reduce fertilizer spread. Adding I-Cote™ to
+                    high-nitrogen, concentrated fertilizers and organo minerals
+                    helps keep particles separate, keeping the fertilizer
+                    free-flowing and maximizing performance. I-Cote™ offers
+                    excellent value to the fertilizer industry as a high
+                    performance compatibilizer and long lasting anti-caking
+                    agent.
+                  </p>
+                </div>
+
+                <a class="btn" href="">
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <FooterComponent />
+      </div>
+      <FooterComponent />
     </div>
   );
 }

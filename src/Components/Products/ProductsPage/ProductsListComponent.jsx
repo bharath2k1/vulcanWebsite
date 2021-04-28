@@ -20,7 +20,10 @@ function ProductsComponent() {
             <h2>Our Ceramics Products</h2>
           </div>
 
-          <div class="row portfolio-container flex-container" data-aos="zoom-in" >
+          <div
+            class="row portfolio-container flex-container"
+            data-aos="zoom-in"
+          >
             <ProductCard
               name="Sodium Bentomite"
               image={graphite}
@@ -98,7 +101,10 @@ function ProductsComponent() {
             <h2>Our Agriculture Products</h2>
           </div>
 
-          <div class="row portfolio-container flex-container" data-aos="zoom-in" >
+          <div
+            class="row portfolio-container flex-container"
+            data-aos="zoom-in"
+          >
             <ProductCard
               name="Organic Soil Conditioner"
               image={soilconditioner}

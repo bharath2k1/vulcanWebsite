@@ -1,70 +1,70 @@
 .banner {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 90px 0;
-    /* background: #EF233C; */
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 90px 0;
+  /* background: #EF233C; */
 
-    background: linear-gradient(rgba(36, 54, 54, 0.80), rgba(3, 48, 54, 0.85)), url(../../../../Images/miningHome.jpeg);
-    background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 100%;
-   justify-content: center;
+  background: linear-gradient(rgba(36, 54, 54, 0.8), rgba(3, 48, 54, 0.85)),
+    url(../../../../Images/miningHome.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  justify-content: center;
 }
 
 .banner .container {
-    max-width: 750px;
-    text-align: center;
-    margin-top: 50px;
+  max-width: 750px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .banner .section-header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .banner .section-header p {
-    color: #EF233C;
-    background: transparent;
+  color: #ef233c;
+  background: transparent;
 }
 
 .banner .section-header p::after {
-    display: none;
+  display: none;
 }
 
 .banner .section-header h2 {
-    color: #ffffff;
-    font-size:70px ;
+  color: #ffffff;
+  font-size: 70px;
 }
 
 .banner .section-header h2 span {
-    color: #EF233C;
-    font-size: 50px;
+  color: #ef233c;
+  font-size: 50px;
 }
 
 .banner .banner-text p {
-    font-size: 18px;
-    color: #ffffff;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 .banner .banner-text .btn {
-    margin-top: 15px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
+  margin-top: 15px;
+  color: #ef233c;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 50px #ffffff;
 }
 
 .banner .banner-text .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
+  color: #ffffff;
+  background: transparent;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  border-color: #ffffff;
 }
 
-@media (max-width: 500px){
-    .banner .section-header h2 {
-        color: #ffffff;
-        font-size: 50px;
-    
-    }
+@media (max-width: 500px) {
+  .banner .section-header h2 {
+    color: #ffffff;
+    font-size: 50px;
   }
+}
